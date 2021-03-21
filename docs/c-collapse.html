@@ -1,0 +1,422 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="../gtag/js.js?id=G-6YWB4ECCWW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6YWB4ECCWW');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../assets/css/vendor.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Collapse - Components</title>
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+
+
+
+    <!-- header -->
+    <header class="header border-bottom">
+      <div class="container container-docs">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a href="../index.html" class="navbar-brand mr-8"><img src="../assets/images/logo-black.svg" alt="Logo"><span class="badge badge-rounded badge-primary ml-2">1.0</span></a>
+
+          <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Landings
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-1">
+                  <a class="dropdown-item" href="../startup.html">Startup</a>
+                  <a class="dropdown-item" href="../saas.html">Saas</a>
+                  <a class="dropdown-item" href="../coworking.html">Coworking</a>
+                  <a class="dropdown-item" href="../job-listing.html">Job Listing</a>
+                  <a class="dropdown-item" href="../agency.html">Agency</a>
+                  <a class="dropdown-item" href="../blog.html">Blog</a>
+                  <a class="dropdown-item" href="../product.html">Product</a>
+                  <a class="dropdown-item" href="../app.html">App</a>
+                  <a class="dropdown-item" href="../index.html">Presentation</a>
+                  <a class="dropdown-item" href="../documentation.html">Documentation</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Pages
+                </a>
+                <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown-2">
+                  <div class="row gutter-0">
+                    <div class="col">
+                      <a class="dropdown-item" href="../about.html">About</a>
+                      <a class="dropdown-item" href="../contact.html">Contact</a>
+                      <a class="dropdown-item" href="../pricing.html">Pricing</a>
+                      <a class="dropdown-item" href="../career.html">Career</a>
+                      <a class="dropdown-item" href="../faq.html">FAQ</a>
+                    </div>
+                    <div class="col">
+                      <a class="dropdown-item" href="../terms.html">Terms</a>
+                      <a class="dropdown-item" href="../services.html">Services</a>
+                      <a class="dropdown-item" href="../article.html">Article</a>
+                      <a class="dropdown-item" href="../portfolio.html">Portfolio</a>
+                      <a class="dropdown-item" href="../404.html">404</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Docs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-3">
+                  <a class="dropdown-item" href="index.html">Get Started</a>
+                  <a class="dropdown-item active" href="c-alerts.html">Components</a>
+                  <a class="dropdown-item" href="s-applications.html">Sections</a>
+                </div>
+              </li>
+            </ul>
+            <a href="" class="action underline text-black ml-auto">Buy now <i class="icon-arrow-up-right"></i></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <div class="documentation">
+      <div class="container container-docs">
+        <div class="row justify-content-between">
+
+
+          <!-- table of contents -->
+          <aside class="col-lg-3">
+            <div class="sticky">
+              <nav class="navbar navbar-expand-lg navbar-light d-block toc">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDocumentation" aria-controls="navbarDocumentation" aria-expanded="false" aria-label="Toggle navigation">
+                  Table of contents
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarDocumentation">
+                  <ul id="page-nav" class="nav flex-column nav-minimal">
+                    <li class="nav-item active">
+                      <a class="nav-link" data-toggle="collapse" href="#menu-1" role="button" aria-expanded="false" aria-controls="menu-1">Getting Started</a>
+                      <div class="collapse" id="menu-1" data-parent="#page-nav">
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="index.html">Introduction</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="file-structure.html">File Structure</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="changelog.html">Changelog</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#menu-2" role="button" aria-expanded="true" aria-controls="menu-2">Components</a>
+                      <div class="collapse show" id="menu-2" data-parent="#page-nav">
+                        <div>
+                          <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-alerts.html">Alerts</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-badge.html">Badge</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-buttons.html">Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-card.html">Card</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-carousel.html">Carousel</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="c-collapse.html">Collapse</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-dropdown.html">Dropdown</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-forms.html">Forms</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-list-group.html">List group</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-modal.html">Modal</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-pagination.html">Pagination</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-popovers.html">Popovers</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-progress.html">Progress</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-spinners.html">Spinners</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-tabs.html">Tabs</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-tooltips.html">Tooltips</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-toasts.html">Toasts</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-video.html">Video</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="s-applications.html">Sections</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </aside>
+
+
+          <!-- content -->
+          <main class="col-lg-9">
+
+            <h1 class="mb-1">Collapse</h1>
+            <p class="lead">Toggle the visibility of content across your project with a few classes and our JavaScript plugins.</p>
+
+
+            <!-- component -->
+            <section class="component">
+              <div class="component-header">
+                <h2 class="component-title">Example</h2>
+              </div>
+              <div class="component-body">
+                <div>
+                  <div class="accordion" id="accordion-1">
+                    <div class="card active">
+                      <div class="card-header" id="heading-1-1">
+                        <h5 class="mb-0">
+                          <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse-1-1" aria-expanded="true" aria-controls="collapse-1-1">
+                            First Collapsible Group Item
+                          </button>
+                        </h5>
+                      </div>
+
+                      <div id="collapse-1-1" class="collapse show" aria-labelledby="heading-1-1" data-parent="#accordion-1">
+                        <div class="card-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa explicabo pariatur fuga maiores quasi eum ex cupiditate ea, suscipit dolorum iure quam veritatis ipsum molestiae nobis quas animi. Voluptatum, nobis.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="heading-1-2">
+                        <h5 class="mb-0">
+                          <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+                            Second Collapsible Group Item
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapse-1-2" class="collapse" aria-labelledby="heading-1-2" data-parent="#accordion-1">
+                        <div class="card-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquam, assumenda dolor veritatis nesciunt numquam commodi quaerat. Pariatur debitis tenetur necessitatibus similique placeat id, voluptate nesciunt dolor dolorum quidem quae.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="heading-1-3">
+                        <h5 class="mb-0">
+                          <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-1-3" aria-expanded="false" aria-controls="collapse-1-3">
+                            Third Collapsible Group Item
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapse-1-3" class="collapse" aria-labelledby="heading-1-3" data-parent="#accordion-1">
+                        <div class="card-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur quam error minus odit, tempore et quis, enim corporis perspiciatis numquam modi doloremque rerum ducimus, quidem delectus unde similique nostrum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <pre><code class="language-markup">&lt;div class="accordion accordion-minimal accordion-minimal-sm" id="accordion-2">
+  &lt;div class="card active">
+    &lt;div class="card-header" id="heading-2-1">
+      &lt;h5 class="mb-0">
+        &lt;button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse-2-1" aria-expanded="true" aria-controls="collapse-2-1">
+          First Collapsible Group Item
+        &lt;/button>
+      &lt;/h5>
+    &lt;/div>
+
+    &lt;div id="collapse-2-1" class="collapse show" aria-labelledby="heading-2-1" data-parent="#accordion-2">
+      &lt;div class="card-body">
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa explicabo pariatur fuga maiores quasi eum ex cupiditate ea, suscipit dolorum iure quam veritatis ipsum molestiae nobis quas animi. Voluptatum, nobis.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="card">
+    &lt;div class="card-header" id="heading-2-2">
+      &lt;h5 class="mb-0">
+        &lt;button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-2-2" aria-expanded="false" aria-controls="collapse-2-2">
+          Second Collapsible Group Item
+        &lt;/button>
+      &lt;/h5>
+    &lt;/div>
+    &lt;div id="collapse-2-2" class="collapse" aria-labelledby="heading-2-2" data-parent="#accordion-2">
+      &lt;div class="card-body">
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquam, assumenda dolor veritatis nesciunt numquam commodi quaerat. Pariatur debitis tenetur necessitatibus similique placeat id, voluptate nesciunt dolor dolorum quidem quae.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="card">
+    &lt;div class="card-header" id="heading-2-3">
+      &lt;h5 class="mb-0">
+        &lt;button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-2-3" aria-expanded="false" aria-controls="collapse-2-3">
+          Third Collapsible Group Item
+        &lt;/button>
+      &lt;/h5>
+    &lt;/div>
+    &lt;div id="collapse-2-3" class="collapse" aria-labelledby="heading-2-3" data-parent="#accordion-2">
+      &lt;div class="card-body">
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur quam error minus odit, tempore et quis, enim corporis perspiciatis numquam modi doloremque rerum ducimus, quidem delectus unde similique nostrum.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+                </div>
+              </div>
+            </section>
+
+            <!-- component -->
+            <section class="component">
+              <div class="component-header">
+                <h2 class="component-title">Minimal</h2>
+              </div>
+              <div class="component-body">
+                <div>
+                  <div class="accordion accordion-minimal accordion-minimal-sm" id="accordion-2">
+                    <div class="card active">
+                      <div class="card-header" id="heading-2-1">
+                        <h5 class="mb-0">
+                          <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse-2-1" aria-expanded="true" aria-controls="collapse-2-1">
+                            First Collapsible Group Item
+                          </button>
+                        </h5>
+                      </div>
+
+                      <div id="collapse-2-1" class="collapse show" aria-labelledby="heading-2-1" data-parent="#accordion-2">
+                        <div class="card-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa explicabo pariatur fuga maiores quasi eum ex cupiditate ea, suscipit dolorum iure quam veritatis ipsum molestiae nobis quas animi. Voluptatum, nobis.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="heading-2-2">
+                        <h5 class="mb-0">
+                          <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-2-2" aria-expanded="false" aria-controls="collapse-2-2">
+                            Second Collapsible Group Item
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapse-2-2" class="collapse" aria-labelledby="heading-2-2" data-parent="#accordion-2">
+                        <div class="card-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquam, assumenda dolor veritatis nesciunt numquam commodi quaerat. Pariatur debitis tenetur necessitatibus similique placeat id, voluptate nesciunt dolor dolorum quidem quae.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="heading-2-3">
+                        <h5 class="mb-0">
+                          <button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-2-3" aria-expanded="false" aria-controls="collapse-2-3">
+                            Third Collapsible Group Item
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapse-2-3" class="collapse" aria-labelledby="heading-2-3" data-parent="#accordion-2">
+                        <div class="card-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur quam error minus odit, tempore et quis, enim corporis perspiciatis numquam modi doloremque rerum ducimus, quidem delectus unde similique nostrum.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <pre><code class="language-markup">&lt;div class="accordion accordion-minimal accordion-minimal-sm" id="accordion-2">
+  &lt;div class="card active">
+    &lt;div class="card-header" id="heading-2-1">
+      &lt;h5 class="mb-0">
+        &lt;button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapse-2-1" aria-expanded="true" aria-controls="collapse-2-1">
+          First Collapsible Group Item
+        &lt;/button>
+      &lt;/h5>
+    &lt;/div>
+
+    &lt;div id="collapse-2-1" class="collapse show" aria-labelledby="heading-2-1" data-parent="#accordion-2">
+      &lt;div class="card-body">
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa explicabo pariatur fuga maiores quasi eum ex cupiditate ea, suscipit dolorum iure quam veritatis ipsum molestiae nobis quas animi. Voluptatum, nobis.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="card">
+    &lt;div class="card-header" id="heading-2-2">
+      &lt;h5 class="mb-0">
+        &lt;button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-2-2" aria-expanded="false" aria-controls="collapse-2-2">
+          Second Collapsible Group Item
+        &lt;/button>
+      &lt;/h5>
+    &lt;/div>
+    &lt;div id="collapse-2-2" class="collapse" aria-labelledby="heading-2-2" data-parent="#accordion-2">
+      &lt;div class="card-body">
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aliquam, assumenda dolor veritatis nesciunt numquam commodi quaerat. Pariatur debitis tenetur necessitatibus similique placeat id, voluptate nesciunt dolor dolorum quidem quae.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;div class="card">
+    &lt;div class="card-header" id="heading-2-3">
+      &lt;h5 class="mb-0">
+        &lt;button class="btn btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse-2-3" aria-expanded="false" aria-controls="collapse-2-3">
+          Third Collapsible Group Item
+        &lt;/button>
+      &lt;/h5>
+    &lt;/div>
+    &lt;div id="collapse-2-3" class="collapse" aria-labelledby="heading-2-3" data-parent="#accordion-2">
+      &lt;div class="card-body">
+        &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem tenetur quam error minus odit, tempore et quis, enim corporis perspiciatis numquam modi doloremque rerum ducimus, quidem delectus unde similique nostrum.&lt;/p>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+                </div>
+              </div>
+            </section>
+
+          </main>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../assets/js/vendor.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

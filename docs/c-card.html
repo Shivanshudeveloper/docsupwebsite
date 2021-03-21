@@ -1,0 +1,370 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="../gtag/js.js?id=G-6YWB4ECCWW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6YWB4ECCWW');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../assets/css/vendor.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Card - Components</title>
+  </head>
+  <body data-spy="scroll" data-target="#toc">
+
+
+
+    <!-- header -->
+    <header class="header border-bottom">
+      <div class="container container-docs">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a href="../index.html" class="navbar-brand mr-8"><img src="../assets/images/logo-black.svg" alt="Logo"><span class="badge badge-rounded badge-primary ml-2">1.0</span></a>
+
+          <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Landings
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-1">
+                  <a class="dropdown-item" href="../startup.html">Startup</a>
+                  <a class="dropdown-item" href="../saas.html">Saas</a>
+                  <a class="dropdown-item" href="../coworking.html">Coworking</a>
+                  <a class="dropdown-item" href="../job-listing.html">Job Listing</a>
+                  <a class="dropdown-item" href="../agency.html">Agency</a>
+                  <a class="dropdown-item" href="../blog.html">Blog</a>
+                  <a class="dropdown-item" href="../product.html">Product</a>
+                  <a class="dropdown-item" href="../app.html">App</a>
+                  <a class="dropdown-item" href="../index.html">Presentation</a>
+                  <a class="dropdown-item" href="../documentation.html">Documentation</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Pages
+                </a>
+                <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown-2">
+                  <div class="row gutter-0">
+                    <div class="col">
+                      <a class="dropdown-item" href="../about.html">About</a>
+                      <a class="dropdown-item" href="../contact.html">Contact</a>
+                      <a class="dropdown-item" href="../pricing.html">Pricing</a>
+                      <a class="dropdown-item" href="../career.html">Career</a>
+                      <a class="dropdown-item" href="../faq.html">FAQ</a>
+                    </div>
+                    <div class="col">
+                      <a class="dropdown-item" href="../terms.html">Terms</a>
+                      <a class="dropdown-item" href="../services.html">Services</a>
+                      <a class="dropdown-item" href="../article.html">Article</a>
+                      <a class="dropdown-item" href="../portfolio.html">Portfolio</a>
+                      <a class="dropdown-item" href="../404.html">404</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-hover">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Docs
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown-3">
+                  <a class="dropdown-item" href="index.html">Get Started</a>
+                  <a class="dropdown-item active" href="c-alerts.html">Components</a>
+                  <a class="dropdown-item" href="s-applications.html">Sections</a>
+                </div>
+              </li>
+            </ul>
+            <a href="" class="action underline text-black ml-auto">Buy now <i class="icon-arrow-up-right"></i></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+    <div class="documentation">
+      <div class="container container-docs">
+        <div class="row justify-content-between">
+
+
+          <!-- table of contents -->
+          <aside class="col-lg-3">
+            <div class="sticky">
+              <nav class="navbar navbar-expand-lg navbar-light d-block toc">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDocumentation" aria-controls="navbarDocumentation" aria-expanded="false" aria-label="Toggle navigation">
+                  Table of contents
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarDocumentation">
+                  <ul id="page-nav" class="nav flex-column nav-minimal">
+                    <li class="nav-item active">
+                      <a class="nav-link" data-toggle="collapse" href="#menu-1" role="button" aria-expanded="false" aria-controls="menu-1">Getting Started</a>
+                      <div class="collapse" id="menu-1" data-parent="#page-nav">
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link" href="index.html">Introduction</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="file-structure.html">File Structure</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="changelog.html">Changelog</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-toggle="collapse" href="#menu-2" role="button" aria-expanded="true" aria-controls="menu-2">Components</a>
+                      <div class="collapse show" id="menu-2" data-parent="#page-nav">
+                        <div>
+                          <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-alerts.html">Alerts</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-badge.html">Badge</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-buttons.html">Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="c-card.html">Card</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-carousel.html">Carousel</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-collapse.html">Collapse</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-dropdown.html">Dropdown</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-forms.html">Forms</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-list-group.html">List group</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-modal.html">Modal</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-pagination.html">Pagination</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-popovers.html">Popovers</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-progress.html">Progress</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-spinners.html">Spinners</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-tabs.html">Tabs</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-tooltips.html">Tooltips</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-toasts.html">Toasts</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="c-video.html">Video</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="s-applications.html">Sections</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </aside>
+
+
+          <!-- content -->
+          <main class="col-lg-9">
+
+            <h1 class="mb-1">Card</h1>
+            <p class="lead">Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.</p>
+
+            <!-- component -->
+            <section class="component">
+              <div class="component-header">
+                <h2 class="component-title">Article</h2>
+              </div>
+              <div class="component-body">
+                <div>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <article class="card">
+                        <a href=""><img src="../assets/images/small-1.jpg" class="card-img-top" alt="Image"></a>
+                        <div class="card-body p-0 pt-3">
+                          <time datetime="2021-12-18 20:00" class="eyebrow text-muted mb-1">20:00, 18 December, 2021</time>
+                          <a href="" class="card-title card-title-arrow"><h5>How To Optimize Progressive Web Apps: Going Beyond The Basics</h5></a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <pre><code class="language-markup">&lt;article class="card">
+  &lt;a href="">&lt;img src="assets/images/small-1.jpg" class="card-img-top" alt="Image">&lt;/a>
+  &lt;div class="card-body p-0 pt-3">
+    &lt;time datetime="2021-12-18 20:00" class="eyebrow text-muted mb-1">20:00, 18 December, 2021&lt;/time>
+    &lt;a href="" class="card-title card-title-arrow">&lt;h5>How To Optimize Progressive Web Apps: Going Beyond The Basics&lt;/h5>&lt;/a>
+  &lt;/div>
+&lt;/article></code></pre>
+                </div>
+              </div>
+            </section>
+
+
+
+            <!-- component -->
+            <section class="component">
+              <div class="component-header">
+                <h2 class="component-title">Tile</h2>
+              </div>
+              <div class="component-body">
+                <div>
+                  <div class="row">
+                    <div class="col-md-10">
+                      <a href="" class="card equal hover-gradient hover-arrow text-white">
+                        <figure class="image" style="background-image: url('../assets/images/small-2.jpg')"></figure>
+                        <div class="card-footer text-shadow">
+                          <div>
+                            <h5 class="card-title">Ethical Considerations In UX Research: The Need For Training And Review</h5>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <pre><code class="language-markup">&lt;a href="" class="card equal equal-3-4 hover-gradient hover-arrow text-white">
+  &lt;figure class="image" style="background-image: url('assets/images/small-2.jpg')">&lt;/figure>
+  &lt;div class="card-footer text-shadow">
+    &lt;div>
+      &lt;h5 class="card-title">Ethical Considerations In UX Research: The Need For Training And Review&lt;/h5>
+    &lt;/div>
+  &lt;/div>
+&lt;/a></code></pre>
+                </div>
+              </div>
+            </section>
+
+            <!-- component -->
+            <section class="component">
+              <div class="component-header">
+                <h2 class="component-title">Feature</h2>
+              </div>
+              <div class="component-body">
+                <div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="card bg-primary text-white">
+                        <div class="card-body">
+                          <h5 class="card-title font-weight-bold">24/7 Access</h5>
+                          <p>Create reusable buttons. Build resizable cards. Make edits once and sync across your designs.</p>
+                          <a href="" class="underline action text-white">Learn More</a>
+                        </div>
+                        <div class="equal equal-4-3">
+                          <figure class="canvas">
+                            <img src="../assets/images/figure-7.svg" alt="">
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <pre><code class="language-markup">&lt;div class="card bg-primary text-white">
+  &lt;div class="card-body">
+    &lt;h5 class="card-title font-weight-bold">24/7 Access&lt;/h5>
+    &lt;p>Create reusable buttons. Build resizable cards. Make edits once and sync across your designs.&lt;/p>
+    &lt;a href="" class="underline action text-white">Learn More&lt;/a>
+  &lt;/div>
+  &lt;div class="equal equal-4-3">
+    &lt;figure class="canvas">
+      &lt;img src="assets/images/figure-7.svg" alt="">
+    &lt;/figure>
+  &lt;/div>
+&lt;/div></code></pre>
+                </div>
+              </div>
+            </section>
+
+            <!-- component -->
+            <section class="component">
+              <div class="component-header">
+                <h2 class="component-title">Price</h2>
+              </div>
+              <div class="component-body">
+                <div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="card bordered border-default">
+                        <div class="card-body">
+                          <h2 class="mb-4 font-weight-bold">$449</h2>
+                          <p class="mb-4 text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Aperiam, dolorem maiores quis</p>
+                          <ul class="list-unstyled mb-4">
+                            <li class="py-1">6 Premium accounts</li>
+                            <li class="py-1">Ad-free usic listening</li>
+                            <li class="py-1">Listen to music ad-free</li>
+                          </ul>
+                          <div>
+                            <a href="" class="btn btn-primary btn-rounded btn-block btn-with-icon">Buy Now <i class="icon-arrow-up-right"></i></a>
+                            <small class="d-block text-muted text-center mt-1">30 days free trial</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <pre><code class="language-css">&lt;div class="card bordered border-default">
+  &lt;div class="card-body">
+    &lt;h2 class="mb-4 font-weight-bold">$449&lt;/h2>
+    &lt;p class="mb-4 text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Aperiam, dolorem maiores quis&lt;/p>
+    &lt;ul class="list-unstyled mb-4">
+      &lt;li class="py-1">6 Premium accounts&lt;/li>
+      &lt;li class="py-1">Ad-free usic listening&lt;/li>
+      &lt;li class="py-1">Listen to music ad-free&lt;/li>
+    &lt;/ul>
+    &lt;div>
+      &lt;a href="" class="btn btn-primary btn-rounded btn-block btn-with-icon">Buy Now &lt;i class="icon-arrow-up-right">&lt;/i>&lt;/a>
+      &lt;small class="d-block text-muted text-center mt-1">30 days free trial&lt;/small>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+                </div>
+              </div>
+            </section>
+
+
+          </main>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="../assets/js/vendor.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
