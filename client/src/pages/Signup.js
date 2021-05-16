@@ -8,7 +8,9 @@ import Footer from '../components/Footer';
 import { Routes } from '../routes';
 
 const Signup = () => {
-
+    const [name, setname] = React.useState('');
+    const [email, setemail] = React.useState('');
+    const [password, setpassword] = React.useState('');
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -31,15 +33,15 @@ const Signup = () => {
                         <div class="card-body">
                             <div class="form-group">
                                 <span class="eyebrow d-block mb-0 text-dark">Full Name</span>
-                                <input type="text" placeholder="Rahul Garg" class="form-control" />
+                                <input value={name} onChange={(e) => setname(e.target.value)} type="text" placeholder="Rahul Garg" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <span class="eyebrow d-block mb-0 text-dark">Email</span>
-                                <input type="email" placeholder="example@mail.com" class="form-control" />
+                                <input value={email} onChange={(e) => setemail(e.target.value)} type="email" placeholder="example@mail.com" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <span class="eyebrow d-block mb-0 text-dark">Password</span>
-                                <input type="password" class="form-control" />
+                                <input value={password} onChange={(e) => setpassword(e.target.value)} type="password" class="form-control" />
                             </div>
                             <button class="btn btn-block btn-lg btn-with-icon btn-primary mt-2">Sign Up <i class="icon-arrow-right"></i></button>
                             <br />

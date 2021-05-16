@@ -42,7 +42,7 @@ const Signin = () => {
                             <button class="btn btn-block btn-lg btn-with-icon btn-primary mt-2">Login <i class="icon-arrow-right"></i></button>
                             <br />
                             <span>
-                                Don't have an account <Link to={Routes.Signup.path}>Sign In </Link>
+                                Don't have an account <Link to={Routes.Signup.path}>Sign Up </Link>
                             </span>
                         </div>
                     </div>

@@ -74,7 +74,7 @@ const Home = () => {
                     <div className="d-none d-md-block"><a href="docs/s-tabs.html" className="btn btn-lg btn-rounded btn-outline-white">PWA</a></div>
                     <div><a href="docs/s-team.html" className="btn btn-lg btn-rounded btn-outline-white">Servers</a></div>
                     <div className="d-none d-md-block"><a href="docs/s-testimonials.html" className="btn btn-lg btn-rounded btn-outline-white">Cloud</a></div>
-                    <div><a href="docs/s-applications.html" className="btn btn-lg btn-rounded btn-primary btn-with-icon">Explore All <i className="icon-arrow-right"></i></a></div>
+                    <div><a href="#/signup" className="btn btn-lg btn-rounded btn-primary btn-with-icon">Explore All <i className="icon-arrow-right"></i></a></div>
                     </div>
                 </div>
                 </div>
