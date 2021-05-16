@@ -21,7 +21,7 @@ const HomeDashboard = () => {
                     <div className="container">
                     <div className="row">
                         <div className="col">
-                        <h2 className="font-weight-bold mb-1">ALl services & development we provide</h2>
+                        <h2 className="font-weight-bold mb-1">All services & development we provide</h2>
                         <a href="" className="action underline text-secondary">Please select your service <i className="icon-arrow-right"></i></a>
                         </div>
                     </div>
