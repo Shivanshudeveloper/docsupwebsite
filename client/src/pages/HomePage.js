@@ -11,6 +11,8 @@ import HomeDashboard from "./dashboard/HomeDashboard";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
+import Signin from "./Signin";
+import Signup from "./Signup";
 
 
 // @Extras
@@ -24,6 +26,8 @@ const HomePage = () => {
             <Route exact path={Routes.Home.path} component={Home} />
             <Route exact path={Routes.About.path} component={About} />
             <Route exact path={Routes.Contact.path} component={Contact} />
+            <Route exact path={Routes.Signin.path} component={Signin} />
+            <Route exact path={Routes.Signup.path} component={Signup} />
 
             <Redirect to={Routes.PageNotFound.path} />
         </Switch>
