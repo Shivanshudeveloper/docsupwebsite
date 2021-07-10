@@ -21,13 +21,18 @@ import PageNotFound from "./PageNotFound";
 const HomePage = () => {
     return (
         <Switch>
-            <Route exact path={Routes.Dashboard.path} component={HomeDashboard} />
-            <Route exact path={Routes.PageNotFound.path} component={PageNotFound} />
+            
             <Route exact path={Routes.Home.path} component={Home} />
             <Route exact path={Routes.About.path} component={About} />
             <Route exact path={Routes.Contact.path} component={Contact} />
             <Route exact path={Routes.Signin.path} component={Signin} />
             <Route exact path={Routes.Signup.path} component={Signup} />
+
+            {/* Dashboard */}
+            <Route exact path={Routes.Dashboard.path} component={HomeDashboard} />
+
+
+            <Route exact path={Routes.PageNotFound.path} component={PageNotFound} />
 
             <Redirect to={Routes.PageNotFound.path} />
         </Switch>
