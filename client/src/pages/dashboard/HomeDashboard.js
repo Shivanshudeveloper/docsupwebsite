@@ -5,10 +5,17 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Dialog from '@material-ui/core/Dialog';
+import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+
+
+
 import Slide from '@material-ui/core/Slide';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Routes } from '../../routes';
-import { auth } from "../../Firebase/index";
+import { auth, firestore } from "../../Firebase/index";
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -21,7 +28,19 @@ const HomeDashboard = () => {
     const [title, settitle] = React.useState('');
     const [description, setdescription] = React.useState('');
     const [servicetime, setservicetime] = React.useState('');
+    const [requirements, setrequirements] = React.useState('');
     const [user, setuser] = React.useState({});
+
+    const [openSnack, setOpenSnack] = React.useState(false);
+    const handleClickSnack = () => {
+        setOpenSnack(true);
+    };
+    const handleCloseSnack = (event, reason) => {
+        if (reason === 'clickaway') {
+        return;
+        }
+        setOpenSnack(false);
+    };
     
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -52,10 +71,44 @@ const HomeDashboard = () => {
         });
     }, []);
 
-    
+    const submit = () => {
+        firestore.collection("requests").doc(uuidv4() + Date.now()).set({
+            title,
+            username: user.displayName,
+            email: user.email,
+            requirements,
+        })
+        .then(() => {
+            handleClose();
+            setrequirements("");
+            handleClickSnack();
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+    }
 
     return (
         <>
+            <Snackbar
+                anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+                }}
+                open={openSnack}
+                autoHideDuration={6000}
+                onClose={handleCloseSnack}
+                message="Successfully Posted"
+                action={
+                <React.Fragment>
+                    <IconButton size="small" aria-label="close" color="inherit" onClick={handleCloseSnack}>
+                    <CloseIcon fontSize="small" />
+                    </IconButton>
+                </React.Fragment>
+                }
+            />
+
+
             <Dialog
                 fullScreen
                 open={open}
@@ -94,15 +147,15 @@ const HomeDashboard = () => {
 
                             <div className="col-12">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Description</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <label for="exampleInputEmail1">Your requirements</label>
+                                    <textarea onChange={(e) => setrequirements(e.target.value)} class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
                             </div>
                             
                         </div>
 
 
-                        <a onClick={handleClose} className="btn btn-primary btn-rounded">Contact Now</a>
+                        <a onClick={submit} className="btn btn-primary btn-rounded">Contact Now</a>
                         <a onClick={handleClose} className="btn btn-outline-dark btn-rounded ml-2">Cancel </a>
                     
                     </div>
@@ -182,7 +235,7 @@ const HomeDashboard = () => {
                                 <li class="py-1">Listen to music ad-free</li>
                                 </ul>
                                 <div>
-                                <a onClick={() => handleClickOpen(">Web+Mobile", "Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Aperiam, dolorem maiores quis", "Upto 800 USD", "Ad-free usic listening", "Listen to music ad-free", "24x7 Service")} class="btn btn-primary btn-rounded btn-block btn-with-icon">Select Now <i class="icon-arrow-up-right"></i></a>
+                                <a onClick={() => handleClickOpen("Web+Mobile", "Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Aperiam, dolorem maiores quis", "Upto 800 USD", "Ad-free usic listening", "Listen to music ad-free", "24x7 Service")} class="btn btn-primary btn-rounded btn-block btn-with-icon">Select Now <i class="icon-arrow-up-right"></i></a>
                                 <small class="d-block text-muted text-center mt-1">24x7 Service</small>
                                 </div>
                             </div>
