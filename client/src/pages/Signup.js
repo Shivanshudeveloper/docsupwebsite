@@ -4,17 +4,46 @@ import { Link } from 'react-router-dom';
 // Components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
+import { auth } from "../Firebase/index";
 import { Routes } from '../routes';
 
 const Signup = () => {
     const [name, setname] = React.useState('');
     const [email, setemail] = React.useState('');
     const [password, setpassword] = React.useState('');
+    const [message, setMessage] = React.useState('');
 
+    
+    const register = (event) => {
+        event.preventDefault();
+        auth.createUserWithEmailAndPassword(email, password)
+        .then((result) => {
+            var user = result.user;
+            // Profile Picture being set by default
+            user.updateProfile({
+                photoURL: "https://kittyinpink.co.uk/wp-content/uploads/2016/12/facebook-default-photo-male_1-1.jpg",
+                displayName: name
+            })
+            .then(() => {
+                user.sendEmailVerification().then(function() {
+                    window.location.href = `/#${Routes.Signin.path}`
+                }).catch(function(error) {
+                    console.log(error);
+                });
+            })
+            .catch(err => console.log(err))
+        })
+        .catch(function(error) {
+            var errorMessage = error.message;
+            setMessage(errorMessage);
+        });
+    }
+    
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+
 
     return (
         <>
@@ -43,7 +72,7 @@ const Signup = () => {
                                 <span class="eyebrow d-block mb-0 text-dark">Password</span>
                                 <input value={password} onChange={(e) => setpassword(e.target.value)} type="password" class="form-control" />
                             </div>
-                            <button class="btn btn-block btn-lg btn-with-icon btn-primary mt-2">Sign Up <i class="icon-arrow-right"></i></button>
+                            <button onClick={register} class="btn btn-block btn-lg btn-with-icon btn-primary mt-2">Sign Up <i class="icon-arrow-right"></i></button>
                             <br />
                             <span>
                                 Already have an Account <Link to={Routes.Signin.path}>Sign In</Link>

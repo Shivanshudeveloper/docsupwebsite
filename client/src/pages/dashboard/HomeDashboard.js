@@ -4,9 +4,13 @@ import React from 'react';
 // Components
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-
 import Dialog from '@material-ui/core/Dialog';
 import Slide from '@material-ui/core/Slide';
+
+import { Routes } from '../../routes';
+import { auth } from "../../Firebase/index";
+
+
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="left" ref={ref} {...props} />;
 });
@@ -17,6 +21,7 @@ const HomeDashboard = () => {
     const [title, settitle] = React.useState('');
     const [description, setdescription] = React.useState('');
     const [servicetime, setservicetime] = React.useState('');
+    const [user, setuser] = React.useState({});
     
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -36,6 +41,16 @@ const HomeDashboard = () => {
         features.length = 0;
         setOpen(false);
     };
+
+    React.useEffect(() => {
+        auth.onAuthStateChanged(function(user) {
+            if (user) {
+                setuser(user);
+            } else {
+                window.location.href = `/#${Routes.Signin.path}`;
+            }
+        });
+    }, []);
 
     
 
@@ -65,22 +80,15 @@ const HomeDashboard = () => {
                         <div className="row">
                             <div className="col-md">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">First Name</label>
-                                    <input type="text" value="Shivanshu" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                    <label for="exampleInputEmail1">Full Name</label>
+                                    <input type="text" value={user.displayName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
                                 </div>
                             </div>
+                            
                             <div className="col-md">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Last Name</label>
-                                    <input type="text" value="Gupta" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                                </div>
-                            </div>
-
-
-                            <div className="col-12">
-                                <div class="form-group">
                                     <label for="exampleInputEmail1">Email</label>
-                                    <input type="email" value="shivanshu@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                    <input type="email" value={user.email} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
                                 </div>
                             </div>
 
@@ -102,13 +110,13 @@ const HomeDashboard = () => {
             </Dialog>
 
 
-            <Header />
+            <Header user={user} />
                 <section className="section-hero">
                     <div className="container">
                     <div className="row">
                         <div className="col">
                         <h2 className="font-weight-bold mb-1">All services & development we provide</h2>
-                        <a href="" className="action underline text-secondary">Please select your service <i className="icon-arrow-right"></i></a>
+                        <a href="" className="action underline text-secondary">My Submitted Requests<i className="icon-arrow-right"></i></a>
                         </div>
                     </div>
                     <div className="row row-cols-1 row-cols-md-3">

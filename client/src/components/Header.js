@@ -2,8 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Routes } from '../routes';
+import { auth } from "../Firebase/index";
 
-const Header = () => {
+const Header = ({ user }) => {
+
+    const logout = () => {
+        auth.signOut().then(() => {
+            window.location.href = `/#${Routes.Home.path}`;
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
+
+
     return (
         <>
         <header className="header header-sticky header-light">
@@ -36,9 +47,18 @@ const Header = () => {
                 </li>
                 
                 </ul>
-                <Link to={Routes.Signup.path} className="action underline text-black ml-auto">
-                    Get Started <i className="icon-arrow-up-right"></i>
-                </Link>
+                {
+                    user ? (
+                        <a onClick={logout} className="action text-black ml-auto">
+                            {user.displayName} (Logout)
+                        </a>
+                    ) : (
+                        <Link to={Routes.Signup.path} className="action underline text-black ml-auto">
+                            Get Started <i className="icon-arrow-up-right"></i>
+                        </Link>
+                    )
+                }
+                
             </div>
             </nav>
         </div>
